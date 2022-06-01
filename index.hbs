@@ -1,3 +1,26 @@
 {{!< default}}
-{{!-- insert everything in this file into the {body} of the default.hbs template --}}
+{{!-- The Start Page of the Website --}}
 
+{{#foreach posts}}
+    <div class="card mt-3 p-3" style="max-width: 840px;">
+        <div class="row">
+            
+            <div class="col-4 justify-content-center">
+                <img src="{{feature_image}}" width="100%">
+            </div>
+    
+            <div class="col">
+                        <div class="text-break">
+                            <a href="{{url}}" alt="{{title}}">
+                            <h2 class="card-title">{{title}}</h2>
+                            </a>
+                            <p>{{excerpt}}</p>
+                        </div>
+            </div>
+        </div>  
+    </div>
+{{/foreach}}
+
+<div class="mt-3 d-flex justify-content-center">
+    {{pagination}}
+</div>

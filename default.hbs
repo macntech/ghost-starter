@@ -1,13 +1,18 @@
 <!doctype html>
-<html lang="{{@site.lang}}">
+<html lang="{{@site.locale}}">
 
     <head>
         {{> "head"}}
     </head>
 
     <body>
+        {{> "navigation"}}
+
+        <div class="container">
+            {{{body}}}
+        </div>
     
-        {{{body}}}
-    
+        {{> "footer"}}
+        {{> "scripts"}}
     </body>
 </html>
